@@ -1,0 +1,51 @@
+﻿@model WebProducts.Models.Product
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h2>Product Delete</h2>
+    <p>Seguro?</p>
+    @using (Html.BeginForm("DeleteConfirmed", "Product", FormMethod.Post))
+    {
+        @Html.HiddenFor(model=>model.Id)
+        <fieldset>
+            <legend>Detalle Productos</legend>
+            <div>
+                @Html.DisplayNameFor(Model=>Model.Category)
+            </div>
+            <div>
+                @Html.DisplayFor(Model=>Model.Category)
+            </div>
+            <div>
+                @Html.DisplayNameFor(Model=>Model.ProductName)
+            </div>
+            <div>
+                @Html.DisplayFor(Model=>Model.ProductName)
+            </div>
+            <div>
+                @Html.DisplayNameFor(Model=>Model.Description)
+            </div>
+            <div>
+                @Html.DisplayFor(Model=>Model.Description)
+            </div>
+            <div>
+                @Html.DisplayNameFor(Model=>Model.AvailableDate)
+            </div>
+            <div>
+                @Html.DisplayFor(Model=>Model.AvailableDate)
+            </div>
+
+        </fieldset>
+        <p>
+            <input type="submit" name="Delete" value="Delete" />
+        </p>
+    }
+    @Html.ActionLink("Volver al Index", "Index", "Product")
+
+</body>
+</html>

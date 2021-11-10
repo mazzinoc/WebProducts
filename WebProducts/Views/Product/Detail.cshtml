@@ -1,0 +1,41 @@
+﻿@model WebProducts.Models.Product 
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detail</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Product Details</legend>
+        <div>
+            @Html.DisplayNameFor(model=>model.Category)
+        </div>
+        <div>
+            @Html.DisplayFor(model=>model.Category)
+        </div>
+        <div>
+            @Html.DisplayNameFor(model=>model.ProductName)
+        </div>
+        <div>
+            @Html.DisplayFor(model=>model.ProductName)
+        </div>
+        <div>
+            @Html.DisplayNameFor(model=>model.Description)
+        </div>
+        <div>
+            @Html.DisplayFor(model=>model.Description)
+        </div>
+        <div>
+            @Html.DisplayNameFor(model=>model.AvailableDate)
+        </div>
+        <div>
+            @Html.DisplayFor(model=>model.AvailableDate)
+        </div>
+    </fieldset>
+    <p>
+        @Html.ActionLink("Back to index","Index","Product")
+    </p>
+</body>
+</html>
